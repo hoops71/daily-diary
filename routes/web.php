@@ -26,6 +26,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['middleware' => ['auth', 'XSS']], function () {
     Route::resource('diary', DiaryPostController::class);
 });
-//Route::resource('diary', DiaryPostController::class)->middleware('auth', 'XSS');
+
 
 Auth::routes();
